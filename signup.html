@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <main>
+        <form class="signup-form" action="/signup" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <div style="display: flex; gap: 10px;">
+                    <label for="country-code" class="visually-hidden">Country Code:</label>
+                    <select id="country-code" name="country-code" required>
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <option value="+91">+91 (India)</option>
+                        <option value="+256">+256 (Uganda)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+81">+81 (Japan)</option>
+                        <option value="+49">+49 (Germany)</option>
+                        <option value="+33">+33 (France)</option>
+                        <option value="+39">+39 (Italy)</option>
+                        <option value="+34">+34 (Spain)</option>
+                        <option value="+55">+55 (Brazil)</option>
+                        <option value="+7">+7 (Russia)</option>
+                        <option value="+86">+86 (China)</option>
+                        <option value="+82">+82 (South Korea)</option>
+                        \end{code}
+                        <!-- Add more country codes as needed -->
+                    </select>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10,15}" required>
+                </div>
+                <small>Format: Select country code and enter 10-15 digits</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </main>
+</body>
+</html>
+<footer>
+    <p>&copy; 2025 John Kakembo. All rights reserved.</p>
+</footer>
